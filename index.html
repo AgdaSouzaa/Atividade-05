@@ -1,0 +1,29 @@
+<html lang="en">
+<body>
+    <script>
+        let saldo = 0;
+        let sair = false;
+        
+        while (!sair) {
+            let opcao = prompt("Bem vindo!\n" +
+                               "4 -> Sair");
+
+            if (opcao == 4) {
+                alert("Obrigado, até a próxima");
+                sair = true;
+            } else if (opcao == 1) {
+                let valor = prompt("Qual o valor do depósito?");
+                saldo = saldo + parseFloat(valor);
+                alert(saldo);
+            } else if (opcao == 2) {
+                alert("Seu saldo é " + saldo);
+            } else if (opcao == 3) {
+                let valor = prompt("Qual o valor de saque?");
+                saldo = saldo - parseFloat(valor);
+            } else {
+                alert("Opção inválida, tente novamente");
+            }
+        }
+    </script>
+</body>
+</html>
